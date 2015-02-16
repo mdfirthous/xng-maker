@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+The MIT License (MIT)
+Copyright (c) 2014-2015 - Pirthous Jakkiria <mdfirthous@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+<html>
+<title>XNG File Maker</title>
+<meta name="author" content="Pirthous Jakkiria (mdfirthous@gmail.com)">
+<head>
+<link rel="stylesheet" href="css/ui.css" type="text/css">
+</head>
+<body class="noselect">
+<div class="inset-logo"><b class="green-text">XNG</b> Maker <sup class="version">BETA</sup></div>
+<div class="top-bar">
+  <div class='btn-group radio-toolbar'>
+  <form name="formmode">
+    <input type="radio" id="radio1" name="radios" value="0" checked>
+    <label for="radio1">Video</label>
+
+    <input type="radio" id="radio2" name="radios"value="1">
+    <label for="radio2">Images</label>
+
+    <input type="radio" id="radio3" name="radios" value="2">
+    <label for="radio3">XNG Player</label> 
+  </form>
+  </div>
+</div>
+
+<div id="stage" class="wrap xng-inset" >
+  <div id="play-btn" ></div>
+  <img id='previewer' class="preview-img " />
+  <div id="video-part"></div>
+  <span class="xng-shadow-txt">Drop Your Images Here</span>
+  <div id="play-tool" class="video-trimmer"></div>
+</div>
+
+<div class="setting-ico"></div>
+
+<div id="messages"></div>
+
+<div  class="thumb-roll xng-hscroll">
+	<div id="thumb-roller" style="width:2900px;padding-right:25px;"></div>
+</div>
+
+<div class="pop-blocker"></div>
+<div class="msg-box">
+  <div class="progressor"></div>
+  <p ><center class="msg-text">You SVG File Is Ready For Download!</center></p>
+  <button class="download-btn">DOWNLOAD</button>
+</div>
+
+
+<script>var XNG = XNG || {};</script>
+<script type='text/javascript' src="js/xng.images.js"></script> 
+<script type='text/javascript' src="js/xng.trimmer.js"></script>
+<script type='text/javascript' src="js/xng.previewer.js"></script>
+<script type='text/javascript' src="js/xng.images.js"></script>
+<script type='text/javascript' src="js/xng.reader.js"></script>
+<script type='text/javascript' src="js/xng.composer.js"></script>
+<script type='text/javascript' src="js/xng.downloader.js"></script>
+<script type='text/javascript' src="js/xng.player.js"></script>
+<script type='text/javascript' src="js/xng.gui.js"></script>
+<script>
+var URL  = window.URL || window.webkitURL;
+var gui = new GUI();
+</script>
+
+</body>
+
+</html>

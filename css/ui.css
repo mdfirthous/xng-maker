@@ -1,0 +1,145 @@
+/* XNG MAKER UI CSS 
+ * @author Pirthous Jakkiria (mdfirthous@gmail.com)
+ * Copyright 2014 - All rights reserved.
+ */
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+/* WEB Interface */
+html,body{background-color:#36363e;width:100%;font-family: 'Lato',arial,serif;font-size: 12px;}
+input{border:1px solid #ccc;outline: none;padding:3px;}
+img{border:none;outline: none;}
+
+/* THUMP Viewer */
+
+.thumb-roll{display:block;position:fixed;bottom:0;left:0;right:0px;height:110px;padding: 10px;background-color:#141517;
+			z-index:99;border-radius: 2px;box-shadow: inset 0 1px 0 black, 0 1px 0 rgba(255, 255, 255, 0.06);overflow:auto;}
+.thumb-roll span {position:relative;display:inline-block;width:100px;height:100px;border-radius:2px;cursor: pointer;float: left;
+			margin-right: 5px;box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);background: #4b4d51;
+		    background-repeat: no-repeat;background-position: center; background-size: cover;/*background-size: 100%;*/
+			border:2px solid #141517 ;opacity:0.6;}
+.thumb-roll span:hover{border:2px solid #5ebcd7;opacity:1; }
+.thumb-roll span.active{border:2px solid #5ebcd7;}
+.thumb-inx {position:absolute;left:0;bottom:0;padding:3px;border-top-right-radius:2px;background-color:#000;color:#fff;}	
+
+/* Custom scrollbar */
+.xng-hscroll {overflow: auto;}
+.xng-hscroll::-webkit-scrollbar {width: 5px;height: 5px;}
+.xng-hscroll::-webkit-scrollbar-track {background-color: rgba(113,112,107,0.1);-webkit-border-radius: 2px;}
+.xng-hscroll::-webkit-scrollbar-thumb:vertical {background:#4b4d51;-webkit-border-radius: 2px;}
+.xng-hscroll::-webkit-scrollbar-thumb:vertical:hover,
+.xng-hscroll::-webkit-scrollbar-thumb:horizontal:hover {background: #525252;}
+.xng-hscroll::-webkit-scrollbar-thumb:horizontal {background-color: #4b4d51;-webkit-border-radius: 2px;}
+
+.xng-viewer{position:relative;margin:0 auto;width:640px;min-height:360px;text-align:center; }
+.xng-shadow-txt{position:absolute; top:20%; width:100%;color: rgb(97, 97, 97);text-shadow: rgb(120,120,120) 1px 0px 0px;font-size:30px;margin-top:20px;text-align:center;}
+.xng-inset{background-color:#141517;border-radius: 2px;box-shadow: inset 0 1px 0 black, 0 1px 0 rgba(255, 255, 255, 0.06);}
+.wrap{position:relative;margin:0 auto;width:640px;margin-top:20px;}
+
+.tool-icon{position:fixed;right:30px;top:30px;width:50px;height: 50px;background-color: #fff;}
+.tool-box{position: fixed;right:30px;top:80px;width:180px;height:350px;background-color: #ccc;padding:10px;}
+
+
+.inset-logo {position:absolute; left:20px;top:20px;font-size:2.5em;font-weight: 700;color: rgb(97, 97, 97);text-shadow: 1px 1px 0px rgba(10,10,10,1);}
+.green-text{color:#679f16;}
+.version { font-size:8px;color:#ccc;vertical-align: super;}
+.preview-img{position: absolute;left:0;right:0;width:640px;height:360px;display:none;}
+.dp-none{display:none;}
+.dp-block{display: :block;}
+
+#playbtn33 {display:none;}
+#play-tool{display:none;}
+#video-part{width:640px;height: 360px;}
+#play-btn{display:none; position:absolute;display:block;top:50%;left:50%;margin-left:-25px;z-index:10;cursor: pointer;
+		  margin-top:-25px;width:50px;height:50px;background-image: url('../images/play.png');opacity:0.6;}
+#play-btn:hover{opacity:1;}
+	.pause-icon{background-position: 0 0;}
+	.play-icon{background-position: -50px 0;}
+	.replay-icon{background-position: -100px 0;}
+
+.setting-ico{position:absolute;right:20px;top:20px;width:50px;height:50px;background-image: url('../images/setting.png');cursor: pointer;display:none;}
+.setting-ico:hover{background-position: -50px 0}
+
+
+.video-trimmer{position:relative;width:640px;height:30px;padding-top:10px;padding-bottom:0px;background-color: #e3e3e3;}
+      
+  .trim-left  { position:absolute;left:50px;top:0;width: 0; height: 0; border-top: 30px solid #443e40; border-left: 15px solid transparent; cursor: pointer;}
+  .trim-right { position:absolute;right:50px;top:0;width: 0; height: 0;border-top: 30px solid #443e40;border-right: 15px solid transparent;cursor:pointer;}
+  .trim-track{position: absolute;left:65px;right:65px;top:8px;height:10px;background-color: #b2adaa;}
+  .trim-min{position:absolute;left:0;padding-top:5px;text-align: center;width:50px;user-select: none;}
+  .trim-max{position:absolute;right:0;padding-top:5px;text-align: center;width:50px;user-select: none;}
+  .play-area{position: absolute;left:0;height:10px;background-color:#679f16; width: 100%;}
+  .play-progress{position:absolute;height:10px;width:80%; background-color:#797979; }
+  .noselect {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+  }
+.top-bar{display:block;height:60px; }
+
+.btn-group {display:block;margin:0 auto;width:330px;margin-top:30px;}
+.radio-toolbar input[type="radio"] { display:none; }
+
+.radio-toolbar label {
+    display:inline-block;
+    margin:-1px;width:80px;padding: 0 12px;	vertical-align: middle;
+	line-height: 28px;	min-height: 30px;	font-size: 1em;
+	text-decoration: none;	text-align: center;	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+	background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+	background-color:#ededed;	
+	text-shadow: 0 1px 0 #fff;cursor: pointer;
+}
+.radio-toolbar input[type="radio"]:checked + label { 
+    -moz-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #89c403), color-stop(1, #77a809));
+	background:-moz-linear-gradient(top, #89c403 5%, #77a809 100%);
+	background:-webkit-linear-gradient(top, #89c403 5%, #77a809 100%);
+	background:-o-linear-gradient(top, #89c403 5%, #77a809 100%);
+	background:-ms-linear-gradient(top, #89c403 5%, #77a809 100%);
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809',GradientType=0);
+	background-color:#89c403;
+	color:#fff;
+}
+
+.pop-blocker{position:fixed;left:0;right:0;top:0;bottom:0;background-color: #000;opacity: 0.8;z-index:95;display:none;}
+.msg-box{position: fixed;left:0;right:0;height:100px;top:40%;margin-top:-50px;background-color: #679f16;z-index:96;display:none;}
+.msg-text{margin-top:20px;color: #fff;font-weight: bold;font-size: 18px;}
+.progressor{position:absolute;height:10px;width:80%; background-color:#fff;display:none;}
+
+.download-btn{display:block;margin:0 auto;padding:10px 30px; text-align: center;background-color: #3c3c3c;color: #fff;
+				border-radius: 3px;border:none;outline: none;cursor: pointer;margin-top: 10px;display:none;}
+.download-btn:hover{background-color: #5A5A5A;}
